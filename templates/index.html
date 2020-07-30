@@ -1,5 +1,90 @@
 [[extend 'layout.html']]
+<nav class="navbar is-light" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div class="navbar-menu">
+        <div class="navbar-start">
+            <a class="navbar-item">
+                THE SOFA
+            </a>
+
+            <a class="navbar-item">
+                REVIEWS
+            </a>
+
+            <a class="navbar-item">
+                ABOUT US
+            </a>
+        </div>
+
+        <a class="navbar-item" href="url">
+            <img class="is-3by1" src="[[=URL('static', 'images/logo.png')]]">
+        </a>
+
+        <div class="navbar-end">
+            <a class="navbar-item">
+                SHOWROOM
+            </a>
+
+            <a class="navbar-item">
+                SWATCHES
+            </a>
+        </div>
+    </div>
+</nav>
 
 <div class="section">
-    <p>Hello, World</p>
+    <div class="columns">
+        <!-- left column -->
+        <div class="column is-two-thirds">
+            <img class="is-16x16" src="[[=URL('static', 'images/padlock.png')]]">
+            <p>Secure Checkout</p>
+            <p>Ships in 5-7 Business Days</p>
+            <img class="is-1by2" src="[[=URL('static', 'images/sofa-red.jpg')]]">
+            <img class="is-64x64" src="[[=URL('static', 'images/free-shipping.svg')]]">
+            <img class="is-64x64" src="[[=URL('static', 'images/trial.png')]]">
+            <img class="is-64x64" src="[[=URL('static', 'images/made-in-america.png')]]">
+            <img class="is-64x64" src="[[=URL('static', 'images/warranty.png')]]">
+            <img class="is-64x64" src="[[=URL('static', 'images/assembly.png')]]">
+            <img class="is-64x64" src="[[=URL('static', 'images/materials.png')]]">
+        </div>
+        <div class="column is-one-thirds">
+            <h1>THE SOFA</h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Donec ac dui interdum, tincidunt velit sit amet.
+            </p>
+                Pay Now
+                $1,250
+                $1450 <-- crossed out
+                $200 OFF with code
+            <p>
+                Pay as low as
+                $25/month
+                with Klarna
+                learn more
+            </p>
+            <p>
+                Save design for later
+            </p>
+            <h2>
+                CHOOSE A FABRIC
+            </h2>
+            <p>
+                Choose your choice from fabrics to leather.
+            </p>
+            <p>
+                Fabric Choices
+            </p>
+            <img class="is-16x16" src="[[=URL('static', 'images/sofa-amber.jpg')]]">
+            <img class="is-16x16" src="[[=URL('static', 'images/sofa-charcoal.jpg')]]">
+            <img class="is-16x16" src="[[=URL('static', 'images/sofa-red.jpg')]]">
+        </div>
+    </div>
 </div>
