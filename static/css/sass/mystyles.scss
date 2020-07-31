@@ -2,6 +2,34 @@
 @import "../bulma-0.9.0/bulma.sass";
 @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
 
+.cropped {
+  width: 800px;
+  height: 400px;
+  object-fit: cover;
+}
+
+.crop {
+  width: 800px;
+  height: 600px;
+  overflow: hidden;
+}
+
+.crop img {
+  width: 8000px;
+  height: 600px;
+  margin: -75px 0 0 -100px;
+}
+
+.header {
+  color: #0E3ba2;
+  font-size: 2.1em;
+}
+
+.underline {
+  border-bottom: 2px solid blue;
+  display: inline-block;
+  line-height: 1.2;
+}
 
 nav.navbar {
   max-height: unset;

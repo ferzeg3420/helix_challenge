@@ -9,8 +9,8 @@
     </div>
     <div class="navbar-menu" id="navMenu">
         <div class="navbar-start">
-            <a class="navbar-item ">
-                <u>THE SOFA</u>
+            <a class="navbar-item">
+                <span class="underline">THE SOFA</span>
             </a>
 
             <a class="navbar-item">
@@ -38,65 +38,86 @@
     </div>
 </nav>
 
-<div class="section">
-    <div class="columns">
+<div class="section" style="position:relative; top:-50px;">
+    <div class="columns is-gapless">
         <!-- left column -->
         <div class="column is-two-thirds">
-            <div class="level">
-                <div class="level-left">
-                    <p>
-                        <img class="is-16x16" src="[[=URL('static', 'images/padlock.png')]]">
-                        Secure Checkout
-                    </p>
+            <div class="section">
+                <div class="level">
+                    <div class="level-left">
+                        <p>
+                            <img class="is-16x16" src="[[=URL('static', 'images/padlock.png')]]">&nbsp;
+                            Secure Checkout
+                        </p>
+                    </div>
+                    <div class="level-right has-text-right">
+                        <p>Ships in 5-7 Business Days</p>
+                    </div>
                 </div>
-                <div class="level-right has-text-right">
-                    <p>Ships in 5-7 Business Days</p>
+                <div>
+                    <!-- <img class="is-1by2" src="[[=URL('static', 'images/cropped-sofa-red.png')]]"> -->
+                    <img class="cropped" src="[[=URL('static', 'images/sofa-red.jpg')]]">
+                </div>
+                <div class="columns">
+                    <div class="column">
+                        <img class="is-64x64" src="[[=URL('static', 'images/free-shipping.svg')]]">
+                    </div>
+                    <div class="column">
+                        <img class="is-64x64" src="[[=URL('static', 'images/trial.png')]]">
+                    </div>
+                    <div class="column">
+                        <img class="is-64x64" src="[[=URL('static', 'images/made-in-america.png')]]">
+                    </div>
+                    <div class="column">
+                        <img class="is-64x64" src="[[=URL('static', 'images/warranty.png')]]">
+                    </div>
+                    <div class="column">
+                        <img class="is-64x64" src="[[=URL('static', 'images/assembly.png')]]">
+                    </div>
+                    <div class="column">
+                        <img class="is-64x64" src="[[=URL('static', 'images/materials.png')]]">
+                    </div>
                 </div>
             </div>
-            <img class="is-1by2" src="[[=URL('static', 'images/sofa-red.jpg')]]">
-            <img class="is-64x64" src="[[=URL('static', 'images/free-shipping.svg')]]">
-            <img class="is-64x64" src="[[=URL('static', 'images/trial.png')]]">
-            <img class="is-64x64" src="[[=URL('static', 'images/made-in-america.png')]]">
-            <img class="is-64x64" src="[[=URL('static', 'images/warranty.png')]]">
-            <img class="is-64x64" src="[[=URL('static', 'images/assembly.png')]]">
-            <img class="is-64x64" src="[[=URL('static', 'images/materials.png')]]">
         </div>
         <div class="column is-one-thirds">
-            <h1>THE SOFA</h1>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Donec ac dui interdum, tincidunt velit sit amet.
-            </p>
+            <div class="section" style="position:relative; top:-10px;">
+                <h1 class="header">THE SOFA</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Donec ac dui interdum, tincidunt velit sit amet.
+                </p>
                 Pay Now
                 $1,250
                 $1450 <-- crossed out
                 $200 OFF with code
-            <p>
-                Pay as low as
-                $25/month
-                with Klarna
-                learn more
-            </p>
-            <p>
-                <a class="button is-link">Add to cart</a>
-            </p>
-            <p class="is-black has-text-black">
-                <a>
-                    Save design for later
-                </a>
-            </p>
-            <h2>
-                CHOOSE A FABRIC
-            </h2>
-            <p>
-                Choose your choice from fabrics to leather.
-            </p>
-            <p>
-                Fabric Choices
-            </p>
-            <img class="is-16x16" src="[[=URL('static', 'images/sofa-amber.jpg')]]">
-            <img class="is-16x16" src="[[=URL('static', 'images/sofa-charcoal.jpg')]]">
-            <img class="is-16x16" src="[[=URL('static', 'images/sofa-red.jpg')]]">
+                <p>
+                    Pay as low as
+                    $25/month
+                    with Klarna
+                    learn more
+                </p>
+                <p>
+                    <a class="button is-link is-fullwidth">Add to cart</a>
+                </p>
+                <div class="has-text-centered" style="font-size: 0.75rem">
+                    <a>
+                        <span class="underline is-centered">Save design for later</span>
+                    </a>
+                </div>
+                <h2>
+                    CHOOSE A FABRIC
+                </h2>
+                <p>
+                    Choose your choice from fabrics to leather.
+                </p>
+                <p>
+                    Fabric Choices
+                </p>
+                <img class="is-16x16" src="[[=URL('static', 'images/sofa-amber.jpg')]]">
+                <img class="is-16x16" src="[[=URL('static', 'images/sofa-charcoal.jpg')]]">
+                <img class="is-16x16" src="[[=URL('static', 'images/sofa-red.jpg')]]">
+            </div>
         </div>
     </div>
 </div>

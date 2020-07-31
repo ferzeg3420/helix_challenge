@@ -7328,21 +7328,33 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   background-color: #fafafa;
   padding: 3rem 1.5rem 6rem; }
 
+.cropped {
+  width: 800px;
+  height: 400px;
+  object-fit: cover; }
+
+.crop {
+  width: 800px;
+  height: 600px;
+  overflow: hidden; }
+
+.crop img {
+  width: 8000px;
+  height: 600px;
+  margin: -75px 0 0 -100px; }
+
+.header {
+  color: #0E3ba2;
+  font-size: 2.1em; }
+
+.underline {
+  border-bottom: 2px solid blue;
+  display: inline-block;
+  line-height: 1.2; }
+
 nav.navbar {
   max-height: unset;
   height: 6rem !important; }
-
-.navbar-item {
-  position: relative; }
-
-.active:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: #4EBA6F; }
 
 a {
   font-family: Bungee;
