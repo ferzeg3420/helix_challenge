@@ -1,0 +1,26 @@
+@charset "utf-8";
+@import "../bulma-0.9.0/bulma.sass";
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+
+
+nav.navbar {
+  max-height: unset;
+  height: 6rem !important;
+}
+
+a {
+  font-family: Bungee;
+  color: black;
+}
+
+h1 {
+  font-family: Bungee;
+}
+
+h2 {
+  font-family: Bungee;
+}
+
+p {
+  color: grey;
+}

@@ -1,17 +1,16 @@
 [[extend 'layout.html']]
-<nav class="navbar is-light" role="navigation" aria-label="main navigation">
+<nav class="navbar is-light is-spaced" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
         </a>
     </div>
-
-    <div class="navbar-menu">
+    <div class="navbar-menu" id="navMenu">
         <div class="navbar-start">
-            <a class="navbar-item">
-                THE SOFA
+            <a class="navbar-item ">
+                <u>THE SOFA</u>
             </a>
 
             <a class="navbar-item">
@@ -24,7 +23,7 @@
         </div>
 
         <a class="navbar-item" href="url">
-            <img class="is-3by1" src="[[=URL('static', 'images/logo.png')]]">
+            <img class="has-ratio"  src="[[=URL('static', 'images/logo.svg')]]" height="600" width="500">
         </a>
 
         <div class="navbar-end">
@@ -43,9 +42,17 @@
     <div class="columns">
         <!-- left column -->
         <div class="column is-two-thirds">
-            <img class="is-16x16" src="[[=URL('static', 'images/padlock.png')]]">
-            <p>Secure Checkout</p>
-            <p>Ships in 5-7 Business Days</p>
+            <div class="level">
+                <div class="level-left">
+                    <p>
+                        <img class="is-16x16" src="[[=URL('static', 'images/padlock.png')]]">
+                        Secure Checkout
+                    </p>
+                </div>
+                <div class="level-right has-text-right">
+                    <p>Ships in 5-7 Business Days</p>
+                </div>
+            </div>
             <img class="is-1by2" src="[[=URL('static', 'images/sofa-red.jpg')]]">
             <img class="is-64x64" src="[[=URL('static', 'images/free-shipping.svg')]]">
             <img class="is-64x64" src="[[=URL('static', 'images/trial.png')]]">
@@ -71,7 +78,12 @@
                 learn more
             </p>
             <p>
-                Save design for later
+                <a class="button is-link">Add to cart</a>
+            </p>
+            <p class="is-black has-text-black">
+                <a>
+                    Save design for later
+                </a>
             </p>
             <h2>
                 CHOOSE A FABRIC
