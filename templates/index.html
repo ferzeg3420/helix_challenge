@@ -22,8 +22,11 @@
             </a>
         </div>
 
-        <a class="navbar-item" href="url">
-            <img class="has-ratio"  src="[[=URL('static', 'images/logo.svg')]]" height="600" width="500">
+        <a href="url">
+            <img class="has-ratio"  src="[[=URL('static', 'images/logo.svg')]]"
+                 height="220"
+                 width="270"
+                 style="position:relative; top:7px">
         </a>
 
         <div class="navbar-end">
@@ -38,7 +41,7 @@
     </div>
 </nav>
 
-<div class="section" style="position:relative; top:-50px;">
+<div class="section" style="position:relative; top:-50px;" id="vue-target">
     <div class="columns is-gapless">
         <!-- left column -->
         <div class="column is-two-thirds">
@@ -54,28 +57,33 @@
                         <p>Ships in 5-7 Business Days</p>
                     </div>
                 </div>
-                <div>
-                    <!-- <img class="is-1by2" src="[[=URL('static', 'images/cropped-sofa-red.png')]]"> -->
-                    <img class="cropped" src="[[=URL('static', 'images/sofa-red.jpg')]]">
+                <div v-if="sofa_color=='red'">
+                    <img class="is-1by2" src="[[=URL('static', 'images/cropped-sofa-red.png')]]">
                 </div>
-                <div class="columns">
-                    <div class="column">
-                        <img class="is-64x64" src="[[=URL('static', 'images/free-shipping.svg')]]">
+                <div v-if="sofa_color=='amber'">
+                    <img class="is-1by2" src="[[=URL('static', 'images/cropped-sofa-amber.png')]]">
+                </div>
+                <div v-if="sofa_color=='charcoal'">
+                    <img class="is-1by2" src="[[=URL('static', 'images/cropped-sofa-charcoal.png')]]">
+                </div>
+                <div class="tile is-ancestor">
+                    <div class="tile">
+                        <img src="[[=URL('static', 'images/free-shipping.svg')]]">
                     </div>
-                    <div class="column">
-                        <img class="is-64x64" src="[[=URL('static', 'images/trial.png')]]">
+                    <div class="tile">
+                        <img src="[[=URL('static', 'images/trial.png')]]">
                     </div>
-                    <div class="column">
-                        <img class="is-64x64" src="[[=URL('static', 'images/made-in-america.png')]]">
+                    <div class="tile">
+                        <img src="[[=URL('static', 'images/made-in-america.png')]]">
                     </div>
-                    <div class="column">
-                        <img class="is-64x64" src="[[=URL('static', 'images/warranty.png')]]">
+                    <div class="tile">
+                        <img src="[[=URL('static', 'images/warranty.png')]]">
                     </div>
-                    <div class="column">
-                        <img class="is-64x64" src="[[=URL('static', 'images/assembly.png')]]">
+                    <div class="tile">
+                        <img src="[[=URL('static', 'images/assembly.png')]]">
                     </div>
-                    <div class="column">
-                        <img class="is-64x64" src="[[=URL('static', 'images/materials.png')]]">
+                    <div class="tile">
+                        <img src="[[=URL('static', 'images/materials.png')]]">
                     </div>
                 </div>
             </div>
@@ -87,37 +95,138 @@
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Donec ac dui interdum, tincidunt velit sit amet.
                 </p>
-                Pay Now
-                $1,250
-                $1450 <-- crossed out
-                $200 OFF with code
-                <p>
-                    Pay as low as
-                    $25/month
-                    with Klarna
-                    learn more
-                </p>
+                <br/>
+                <div class="columns">
+                    <div class="column has-text-centered">
+                        <p>Pay Now</p>
+                        <p class="has-text-weight-bold"
+                           style="color: #FF0000; font-size: 30px;">
+                            $1,250
+                        </p>
+                        <p style="text-decoration: line-through;">$1,450</p>
+                        <a class="discreet-link" style="position: relative; top: -7px">$200 OFF with code</a>
+                    </div>
+                    <div class="divider is-vertical is-white"></div>
+                    <div class="column has-text-centered">
+                        <p>Pay as low as</p>
+                        <p class="has-text-weight-bold"
+                           style="color:#FF0000; font-size: 30px;">
+                            $25<span style="font-size: 15px;">/month</span>
+                        </p>
+                        <p>with Klarna</p>
+                        <a class="discreet-link discreet-underline"
+                           style="position: relative; top: -7px">
+                            learn more
+                        </a>
+                    </div>
+                </div>
                 <p>
                     <a class="button is-link is-fullwidth">Add to cart</a>
                 </p>
-                <div class="has-text-centered" style="font-size: 0.75rem">
+                <div style="font-size: 0.75rem; text-align: center">
                     <a>
-                        <span class="underline is-centered">Save design for later</span>
+                        <span class="underline is-centered"
+                              style="position: relative; top: 8px">
+                            save design for later
+                        </span>
                     </a>
                 </div>
+                <br/>
+
+                <div class="divider is-white"></div>
+
                 <h2>
-                    CHOOSE A FABRIC
+                    1. CHOOSE A FABRIC
                 </h2>
                 <p>
                     Choose your choice from fabrics to leather.
                 </p>
-                <p>
+                <br/>
+                <p class="has-text-weight-bold has-text-grey-dark">
                     Fabric Choices
                 </p>
-                <img class="is-16x16" src="[[=URL('static', 'images/sofa-amber.jpg')]]">
-                <img class="is-16x16" src="[[=URL('static', 'images/sofa-charcoal.jpg')]]">
-                <img class="is-16x16" src="[[=URL('static', 'images/sofa-red.jpg')]]">
+                <br/>
+                <div class="columns is-gapless">
+                    <div class="column"
+                         v-if="sofa_color=='amber'">
+                        <div class="selected-polaroid">
+                            <img class="selected-rounded" style="width: 100%;"
+                                 src="[[=URL('static', 'images/sofa-amber.jpg')]]">
+                            <div class="container">
+                                <p class="has-text-centered" style="color: white">
+                                    Amber
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column"
+                         v-on:click="select('amber')"
+                         v-else>
+                        <div class="polaroid">
+                            <img class="rounded" style="width: 100%;"
+                                 src="[[=URL('static', 'images/sofa-amber.jpg')]]">
+                            <div class="container">
+                                <p class="has-text-centered">
+                                    Amber
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column"
+                         v-if="sofa_color=='charcoal'">
+                        <div class="selected-polaroid">
+                            <img class="selected-rounded" style="width: 100%;"
+                                 src="[[=URL('static', 'images/sofa-charcoal.jpg')]]">
+                            <div class="container">
+                                <p class="has-text-centered" style="color:white">
+                                    Charcoal
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column"
+                         v-on:click="select('charcoal')"
+                         v-else>
+                        <div class="polaroid">
+                            <img class="rounded" style="width: 100%;"
+                                 src="[[=URL('static', 'images/sofa-charcoal.jpg')]]">
+                            <div class="container">
+                                <p class="has-text-centered">
+                                    Charcoal
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column"
+                         v-if="sofa_color=='red'">
+                        <div class="selected-polaroid">
+                            <img class="selected-rounded" style="width: 100%;"
+                                 src="[[=URL('static', 'images/sofa-red.jpg')]]">
+                            <div class="container">
+                                <p class="has-text-centered" style="color: white">
+                                    Red
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column"
+                         v-on:click="select('red')"
+                         v-else>
+                        <div class="polaroid">
+                            <img class="rounded" style="width: 100%;"
+                                 src="[[=URL('static', 'images/sofa-red.jpg')]]">
+                            <div class="container">
+                                <p class="has-text-centered">
+                                    Red
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
+[[block page_scripts]]
+<script src="js/index.js"></script>
+[[end]]
