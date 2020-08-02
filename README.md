@@ -6,12 +6,19 @@
 
 ### 2.- From the command line do: 
 
-python3 -m pip install --upgrade py4web
-py4web setup apps
+git clone https://github.com/web2py/py4web.git
+
+cd py4web
+
+python3 -m pip install -r requirements.txt
+
+./py4web.py setup apps
+
 cd apps
+
 git clone https://github.com/ferzeg3420/helix_challenge.git
-cd ..
-py4web run apps
+
+./py4web.py run apps
 
 ### 3.- On a browser:
 
@@ -33,9 +40,15 @@ I feel that with vue.js it is very easy to write clean javascript code.
 
 ## Sources:
 https://www.python.org/downloads/
+
 https://py4web.com/_documentation/static/index.html#chapter-01
+
 https://bulma.io/documentation/
+
 https://py4web.com/_documentation/static/index.html
+
 https://developer.mozilla.org/en-US/docs/Web/Events
+
 https://www.w3schools.com
+
 https://stackoverflow.com
