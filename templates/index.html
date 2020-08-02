@@ -1,13 +1,18 @@
 [[extend 'layout.html']]
 <nav class="navbar is-light is-spaced" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
+        <a href="url">
+            <img class="has-ratio force-center" src="[[=URL('static', 'images/logo.svg')]]"
+                 height="220"
+                 width="270">
+        </a>
         <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
         </a>
     </div>
-    <div class="navbar-menu" id="navMenu">
+    <div class="navbar-menu has-background-light" id="navMenu">
         <div class="navbar-start">
             <a class="navbar-item">
                 <span class="underline">THE SOFA</span>
@@ -21,13 +26,6 @@
                 ABOUT US
             </a>
         </div>
-
-        <a href="url">
-            <img class="has-ratio"  src="[[=URL('static', 'images/logo.svg')]]"
-                 height="220"
-                 width="270"
-                 style="position:relative; top:7px">
-        </a>
 
         <div class="navbar-end">
             <a class="navbar-item">
@@ -50,10 +48,13 @@
                     <div class="level-left">
                         <p>
                             <img class="is-16x16" src="[[=URL('static', 'images/padlock.png')]]">&nbsp;
-                            Secure Checkout
+                            <span> Secure Checkout </span>
                         </p>
                     </div>
-                    <div class="level-right has-text-right">
+                    <div class="level-left has-text-left" v-if="is_mobile">
+                        <p>Ships in 5-7 Business Days</p>
+                    </div>
+                    <div class="level-right has-text-right" v-else>
                         <p>Ships in 5-7 Business Days</p>
                     </div>
                 </div>
@@ -66,24 +67,46 @@
                 <div v-if="sofa_color=='charcoal'">
                     <img class="is-1by2" src="[[=URL('static', 'images/cropped-sofa-charcoal.png')]]">
                 </div>
-                <div class="tile is-ancestor">
-                    <div class="tile">
+                <div class="columns is-mobile" v-if="!is_mobile">
+                    <div class="column">
                         <img src="[[=URL('static', 'images/free-shipping.svg')]]">
                     </div>
-                    <div class="tile">
+                    <div class="column">
                         <img src="[[=URL('static', 'images/trial.png')]]">
                     </div>
-                    <div class="tile">
-                        <img src="[[=URL('static', 'images/made-in-america.png')]]">
+                    <div class="column">
+                        <img src="[[=URL('static', 'images/made-in-america.svg')]]">
                     </div>
-                    <div class="tile">
-                        <img src="[[=URL('static', 'images/warranty.png')]]">
+                    <div class="column">
+                        <img src="[[=URL('static', 'images/warranty.svg')]]">
                     </div>
-                    <div class="tile">
-                        <img src="[[=URL('static', 'images/assembly.png')]]">
+                    <div class="column">
+                        <img src="[[=URL('static', 'images/assembly.svg')]]">
                     </div>
-                    <div class="tile">
-                        <img src="[[=URL('static', 'images/materials.png')]]">
+                    <div class="column">
+                        <img src="[[=URL('static', 'images/materials.svg')]]">
+                    </div>
+                </div>
+                <div class="columns is-mobile" v-if="is_mobile">
+                    <div class="column">
+                        <img src="[[=URL('static', 'images/free-shipping.svg')]]">
+                    </div>
+                    <div class="column">
+                        <img src="[[=URL('static', 'images/trial.png')]]">
+                    </div>
+                    <div class="column">
+                        <img src="[[=URL('static', 'images/made-in-america.svg')]]">
+                    </div>
+                </div>
+                <div class="columns is-mobile" v-if="is_mobile">
+                    <div class="column">
+                        <img src="[[=URL('static', 'images/materials.svg')]]">
+                    </div>
+                    <div class="column">
+                        <img src="[[=URL('static', 'images/warranty.svg')]]">
+                    </div>
+                    <div class="column">
+                        <img src="[[=URL('static', 'images/assembly.svg')]]">
                     </div>
                 </div>
             </div>
