@@ -18,6 +18,8 @@ cd apps
 
 git clone https://github.com/ferzeg3420/helix_challenge.git
 
+cd ..
+
 ./py4web.py run apps
 
 ### 3.- On a browser:
