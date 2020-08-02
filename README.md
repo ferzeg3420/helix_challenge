@@ -1,5 +1,12 @@
 # Helix Sleep Challenge
 
+## Files of interest
+
+* helix_challenge/template/index.html
+* helix_challenge/static/js/index.js
+* helix_challenge/static/js/navbar.js
+* helix_challenge/static/css/sass/mystyles.scss
+
 ## Instructions:
 
 ### 1.- Install Python3
